@@ -1,0 +1,19 @@
+#spring:
+#  datasource:
+#    password: password
+#    url: jdbc:h2:file:~/sandbox
+#    username: SA
+#    driver-class-name: org.h2.Driver
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:mysql://localhost:3306/supplier_dev
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8081
