@@ -6,4 +6,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class SupplierService {
+
+    public Supplier createSupplier(Supplier supplier) {
+        return null;
+    }
 }
