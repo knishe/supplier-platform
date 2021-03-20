@@ -16,19 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class SupplierController {
 
     @Operation(
-            summary = "",
-            description = ""
+            summary = "Create new supplier",
+            description = "This API creates a new supplier"
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
-                    description = "Creates and returns an empty basket",
+                    description = "Creates and returns the created supplier details",
                     content = @Content(schema = @Schema(implementation = SupplierResponse.class)))
     })
     @GetMapping("{id}")
-    public ResponseEntity requestSupplier(@PathVariable String id) {
+    public ResponseEntity<SupplierResponse> requestSupplier(@PathVariable String id) {
         return ResponseEntity.ok().build();
     }
-
 
     class SupplierResponse {
     }
