@@ -7,6 +7,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class SupplierService {
 
+    /**
+     * Creates supplier
+     * @param supplier
+     * @return {@link Supplier}
+     */
     public Supplier createSupplier(Supplier supplier) {
         return null;
     }
