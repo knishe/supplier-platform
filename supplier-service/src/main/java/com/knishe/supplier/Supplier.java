@@ -1,14 +1,18 @@
 package com.knishe.supplier;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Data
 @Entity
+@Getter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Supplier {
     @Id
     private Long id;

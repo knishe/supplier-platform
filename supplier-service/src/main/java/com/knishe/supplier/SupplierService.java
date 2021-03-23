@@ -10,18 +10,23 @@ import org.springframework.stereotype.Service;
 public class SupplierService {
 
     private ApplicationEventPublisher applicationEventPublisher;
+    private SupplierRepository supplierRepository;
 
     @Autowired
-    public SupplierService(ApplicationEventPublisher applicationEventPublisher) {
+    public SupplierService(ApplicationEventPublisher applicationEventPublisher,
+                           SupplierRepository supplierRepository) {
         this.applicationEventPublisher = applicationEventPublisher;
+        this.supplierRepository = supplierRepository;
     }
 
     /**
      * Creates supplier
-     * @param supplier
+     * @param supplier Supplier to create
      * @return {@link Supplier}
      */
     public Supplier createSupplier(Supplier supplier) {
-        return null;
+        Supplier createdSupplier = supplierRepository.save(supplier);
+
+        return createdSupplier;
     }
 }
