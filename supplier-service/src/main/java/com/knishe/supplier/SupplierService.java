@@ -27,6 +27,7 @@ public class SupplierService {
     public Supplier createSupplier(Supplier supplier) {
         Supplier createdSupplier = supplierRepository.save(supplier);
 
+        applicationEventPublisher.publishEvent(new SupplierCreateEvent(createdSupplier));
         return createdSupplier;
     }
 }
